@@ -116,14 +116,7 @@ Password for all: `password123`
 
 ---
 
-## Deploy
 
-- **Frontend** → Push to GitHub, import in [Vercel](https://vercel.com), set `NEXT_PUBLIC_API_URL`
-- **Backend** → Connect repo on [Render](https://render.com), root dir `backend`, start command `bash start.sh`
-
-Full guide in [DEPLOY.md](DEPLOY.md).
-
----
 
 ## Project Structure
 
