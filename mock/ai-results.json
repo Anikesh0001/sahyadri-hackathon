@@ -1,0 +1,59 @@
+[
+  {
+    "bugId": "bug-1",
+    "category": "Authentication / Routing",
+    "complexity": "Medium",
+    "estimatedBounty": 150,
+    "confidenceScore": 89,
+    "impactScore": {
+      "userImpact": 95,
+      "severity": 90,
+      "urgency": 85,
+      "popularity": 70
+    },
+    "nlpSummary": "The issue involves a cyclic redirect between login and dashboard due to unhandled expired refresh tokens in the API interceptor.",
+    "errorClusters": ["401 Unauthorized", "Infinite Redirect", "JWT Expiration"],
+    "logInsights": [
+      "Interceptor fails to break loop on secondary 401",
+      "Missing clear token operation before redirecting"
+    ]
+  },
+  {
+    "bugId": "bug-2",
+    "category": "Payment Gateway Integration",
+    "complexity": "High",
+    "estimatedBounty": 300,
+    "confidenceScore": 94,
+    "impactScore": {
+      "userImpact": 100,
+      "severity": 95,
+      "urgency": 98,
+      "popularity": 60
+    },
+    "nlpSummary": "Failure in processing Stripe webhooks for non-US currencies caused by assuming currency fields are always uppercase or defined.",
+    "errorClusters": ["TypeError", "Webhook Failure", "Data Parsing"],
+    "logInsights": [
+      "Accessing .toUpperCase() on undefined value in webhook handler",
+      "Missing fallback currency logic"
+    ]
+  },
+  {
+    "bugId": "bug-4",
+    "category": "Memory Management / Infrastructure",
+    "complexity": "Extreme",
+    "estimatedBounty": 500,
+    "confidenceScore": 76,
+    "impactScore": {
+      "userImpact": 60,
+      "severity": 100,
+      "urgency": 90,
+      "popularity": 45
+    },
+    "nlpSummary": "Severe memory leak in Node.js worker processing video feeds via FFmpeg, eventually causing V8 to throw an Out of Memory error.",
+    "errorClusters": ["OOM Crash", "Buffer Retention", "Worker Dying"],
+    "logInsights": [
+      "V8 mark-compacts failing near heap limit",
+      "Possible unclosed streams in media parser"
+    ]
+  }
+]

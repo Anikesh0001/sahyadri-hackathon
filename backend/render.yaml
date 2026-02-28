@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: crowdfundfix-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start.sh
+    autoDeploy: true
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "1440"
+      - key: ENVIRONMENT
+        value: production
+      - key: FRONTEND_URL
+        sync: false

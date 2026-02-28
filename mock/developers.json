@@ -1,0 +1,34 @@
+[
+  {
+    "id": "dev-1",
+    "name": "Sarah Chen",
+    "skills": ["frontend", "react", "css", "nodejs"],
+    "successRate": 94.5,
+    "bugsResolved": 42,
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+  },
+  {
+    "id": "dev-2",
+    "name": "Alex Rodriguez",
+    "skills": ["backend", "python", "payments", "stripe", "nodejs"],
+    "successRate": 98.0,
+    "bugsResolved": 115,
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
+  },
+  {
+    "id": "dev-3",
+    "name": "David Kim",
+    "skills": ["devops", "kubernetes", "memory-leak", "c++"],
+    "successRate": 88.2,
+    "bugsResolved": 19,
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=David"
+  },
+  {
+    "id": "dev-4",
+    "name": "Elena Smith",
+    "skills": ["auth", "security", "jwt", "frontend"],
+    "successRate": 91.0,
+    "bugsResolved": 33,
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Elena"
+  }
+]
